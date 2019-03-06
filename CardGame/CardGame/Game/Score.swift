@@ -47,13 +47,7 @@ struct ScoreCalculator {
         }
         return nil
     }
-    // 변경전
-//    static func getRank(_ cards: [Card]) -> HandBetting? {
-//        let rank = makeRanks(cards)
-//        guard let winRank = rank.max() else { return nil }
-//        return winRank
-//    }
-    // 수정
+
     static func getRank(_ cards: CardStack) -> HandBetting? {
         let rank = makeRanks(cards.getCardData())
         guard let winRank = rank.max() else { return nil }
